@@ -13,12 +13,18 @@ class Var(object):
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     
-    # Additional configuration variables...
-    
-    if AUTH_TOKEN_DATA is not None:
-        os.makedirs(TEMP_DOWNLOAD_DIRECTORY, exist_ok=True)  # Ensure directory exists
-        with open(os.path.join(TEMP_DOWNLOAD_DIRECTORY, "auth_token.txt"), "w") as t_file:
-            t_file.write(AUTH_TOKEN_DATA)
+    # Ensure TEMP_DOWNLOAD_DIRECTORY is set with a fallback value
+TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "/tmp")  # Default to '/tmp' if not set
+
+# Check if TEMP_DOWNLOAD_DIRECTORY is valid
+if TEMP_DOWNLOAD_DIRECTORY:
+    os.makedirs(TEMP_DOWNLOAD_DIRECTORY, exist_ok=True)  # Make sure the directory exists
+    # Save the auth token to a file
+    with open(os.path.join(TEMP_DOWNLOAD_DIRECTORY, "auth_token.txt"), "w") as t_file:
+        t_file.write(AUTH_TOKEN_DATA)
+else:
+    raise ValueError("TEMP_DOWNLOAD_DIRECTORY is not set.")
+
     
     # Private group ID validation
     PRIVATE_GROUP_ID = os.environ.get("PRIVATE_GROUP_ID", None)
