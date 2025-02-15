@@ -1,4 +1,4 @@
-iimport os
+import os
 
 class Var(object):
     APP_ID = int(os.environ.get("APP_ID", 6))
