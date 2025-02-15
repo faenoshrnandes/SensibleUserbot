@@ -6,9 +6,7 @@ aria2p
 async_generator
 beautifulsoup4
 bs4
-bwb==3.0.0
 cfscrape
-coffeehouse
 cowpy
 cryptg
 dnspython
@@ -19,8 +17,8 @@ geopy
 gitpython
 google-api-python-client==1.8.0
 google-auth-oauthlib
-google_images_download>=2.7.1
-googletrans>=2.4.0
+bing-image-downloader
+deep-translator
 gsearch
 hachoir
 heroku3
@@ -30,7 +28,6 @@ lxml
 oauth2client
 psycopg2
 psycopg2-binary
-PyLyrics
 pySmartDL
 pybase64>=0.4.0
 pyfiglet
@@ -51,5 +48,4 @@ sqlalchemy>=1.2
 telegraph
 urbandict>=0.5
 wikipedia>=1.4.0
-youtube-dl
-covid
+yt-dlp
