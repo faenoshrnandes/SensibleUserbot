@@ -1,4 +1,4 @@
-from userbot import bot
+ffrom userbot import bot
 from sys import argv
 import sys
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -18,11 +18,11 @@ async def add_bot(bot_token):
     bot.uid = telethon.utils.get_peer_id(bot.me)
 
 
-
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
     bot.tgbot = None
+    # Use the environment variable here
     if Var.TG_BOT_USER_NAME_BF_HER is not None:
         print("Initiating Inline Bot")
         # ForTheGreatrerGood of beautification
@@ -50,11 +50,9 @@ for name in files:
 
 import userbot._core
 
-print("Yay your userbot is officially working. You should Do .alive To Chk That Bot Is Working Or Not If Any Eror Contact @CeoWhitehatCracks && Join @Sensible_userbotFor This Cool Bot")
+print("Yay your userbot is officially working. You should Do .alive To Chk That Bot Is Working Or Not If Any Error Contact @CeoWhitehatCracks && Join @Sensible_userbotFor This Cool Bot")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
     bot.run_until_disconnected()
-
-
