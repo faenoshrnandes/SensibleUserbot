@@ -17,7 +17,6 @@ geopy
 gitpython
 google-api-python-client==1.8.0
 google-auth-oauthlib
-bing-image-downloader
 deep-translator
 gsearch
 hachoir
@@ -26,7 +25,6 @@ httplib2
 humanize
 lxml
 oauth2client
-psycopg2
 psycopg2-binary
 pySmartDL
 pybase64>=0.4.0
@@ -43,6 +41,7 @@ regex
 requests>=2.18.4
 search-engine-parser>=0.4.2
 selenium
+chromedriver-autoinstaller
 speedtest-cli>=2.0.2
 sqlalchemy>=1.2
 telegraph
